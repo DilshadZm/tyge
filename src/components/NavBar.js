@@ -8,7 +8,11 @@ export default function Layout({ children }) {
   };
 
   return (
-    <div className="p-5">
+    
+
+
+
+    <div className="p-0">
       <nav>
         <button
           type="button"

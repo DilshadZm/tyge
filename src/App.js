@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Layout from "./components/NavBar";
 import Login from "./components/Login";
 import "./input.css";
@@ -12,9 +12,9 @@ import Contracts from "./components/Contracts";
 import People from "./components/People";
 
 function App() {
-  const authCtx = useContext(AppContext);
-  const isLoggedIn = authCtx.isLoggedIn;
-
+  // const authCtx = useContext(AppContext);
+  // const isLoggedIn = authCtx.isLoggedIn;
+  const [isLoggedIn]=useState(true)
   return (
     <>
       {isLoggedIn ? (
