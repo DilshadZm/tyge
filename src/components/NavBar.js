@@ -8,10 +8,6 @@ export default function Layout({ children }) {
   };
 
   return (
-    
-
-
-
     <div className="p-0">
       <nav>
         <button
