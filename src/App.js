@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import Layout from "./components/NavBar";
 import Login from "./components/Login";
 import "./input.css";
-import { Routes, Route, HashRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import AppContext from "./AppContext";
 import Dashboard from "./components/Dashboard";
 import Charts from "./components/Charts";
@@ -18,19 +18,19 @@ function App() {
   return (
     <>
       {isLoggedIn ? (
-        <HashRouter>
+        <BrowserRouter>
           <Layout>
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="dashboard" element={<Dashboard />} />
-              <Route path="masters" element={<Charts />} />
+              <Route path="charts" element={<Charts />} />
               <Route path="bookmarks" element={<Bookmarks />} />
               <Route path="invoices" element={<Invoices />} />
               <Route path="contracts" element={<Contracts />} />
               <Route path="people" element={<People />} />
             </Routes>
           </Layout>
-        </HashRouter>
+        </BrowserRouter>
       ) : (
         <Login />
       )}
