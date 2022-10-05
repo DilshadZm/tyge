@@ -1,0 +1,11 @@
+table{
+    border: 0ch transparent;
+}
+tbody tr td:first-child{
+    color: blue;
+}
+th{
+    font-style: bold;
+    font-size: 16px;
+    color: black;
+}

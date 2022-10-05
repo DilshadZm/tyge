@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Fragment } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import AppContext from "../AppContext";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -24,7 +24,7 @@ export default function Layout({ children }) {
     <div className="p-0">
       <Disclosure
         as="nav"
-        className="bg-gradient-to-r from-red-500  to-violet-900"
+        className="bg-gradient-to-r from-red-500 to-violet-900"
       >
         {({ open }) => (
           <>
@@ -50,126 +50,137 @@ export default function Layout({ children }) {
                       leaveFrom="transform opacity-100 scale-100"
                       leaveTo="transform opacity-0 scale-95"
                     >
-                      <Menu.Items className="absolute right--10 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                        <div className="py-1">
+                      <Menu.Items className="absolute p-2 right--10 z-10 mt-2 w-48 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                        <div className="py-0">
+                          <div className="rounded mx-4 my-2 hover:bg-blue-100 hover:text-blue-600">
                           <Menu.Item>
                             {({ active }) => (
-                              <Link
+                              <NavLink
                                 to="/dashboard"
                                 className={
                                   (active
-                                    ? "bg-gray-100 text-gray-900"
+                                    ? "bg-blue-300 text-blue-600"
                                     : "text-gray-700",
-                                  "group flex items-center px-4 py-2 text-sm")
+                                  "group flex items-center text-sm ")
                                 }
                               >
                                 <TbLayoutDashboard
-                                  className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500"
+                                  className="mr-3 h-8 w-8 p-1 rounded bg-blue-600 text-white"
                                   aria-hidden="true"
                                 />
                                 Dashboard
-                              </Link>
+                              </NavLink>
                             )}
                           </Menu.Item>
+                          </div>
+                          <div className="rounded mx-4 my-2 hover:bg-orange-100 hover:text-orange-600">
                           <Menu.Item>
                             {({ active }) => (
-                              <Link
+                              <NavLink
                               to="/invoices"
                                 className={
                                   (active
                                     ? "bg-gray-100 text-gray-900"
                                     : "text-gray-700",
-                                  "group flex items-center px-4 py-2 text-sm")
+                                  "group flex items-center text-sm")
                                 }
                               >
                                 <BsFileText
-                                  className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500"
+                                  className="mr-3 h-8 w-8 p-1 rounded bg-orange-200 text-orange-600 "
                                   aria-hidden="true"
                                 />
                                 Invoices
-                              </Link>
+                              </NavLink>
                             )}
                           </Menu.Item>
-                        </div>
-                        <div className="py-1">
+                          </div>
+                        
+                        <div className="rounded mx-4 my-2 hover:bg-red-100 hover:text-red-500">
+
                           <Menu.Item>
                             {({ active }) => (
-                              <Link
+                              <NavLink
                               to="/charts"
                                 className={
                                   (active
                                     ? "bg-gray-100 text-gray-900"
                                     : "text-gray-700",
-                                  "group flex items-center px-4 py-2 text-sm")
+                                  "group flex items-center text-sm")
                                 }
                               >
                                 <BiBarChartSquare
-                                  className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500"
+                                  className="mr-3 h-8 w-8 p-1 rounded bg-red-200 text-red-500"
                                   aria-hidden="true"
                                 />
                                 Charts
-                              </Link>
+                              </NavLink>
                             )}
                           </Menu.Item>
+                          </div>
+                          <div className="rounded mx-4 my-2 hover:bg-pink-100 hover:text-pink-400">
                           <Menu.Item>
                             {({ active }) => (
-                              <Link
+                              <NavLink
                               to="/bookmarks"
                                 className={
                                   (active
                                     ? "bg-gray-100 text-gray-900"
                                     : "text-gray-700",
-                                  "group flex items-center px-4 py-2 text-sm")
+                                  "group flex items-center  text-sm")
                                 }
                               >
                                 <FiBookmark
-                                  className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500"
+                                  className="mr-3 h-8 w-8 p-1 rounded bg-pink-200 text-pink-400 "
                                   aria-hidden="true"
                                 />
                                 Bookmarks
-                              </Link>
+                              </NavLink>
                             )}
                           </Menu.Item>
-                        </div>
-                        <div className="py-1">
+                          </div>
+                        
+                        <div className="rounded mx-4 my-2 hover:bg-green-100 hover:text-green-500">
                           <Menu.Item>
                             {({ active }) => (
-                              <Link
+                              <NavLink
                               to="/contracts"
                                 className={
                                   (active
                                     ? "bg-gray-100 text-gray-900"
                                     : "text-gray-700",
-                                  "group flex items-center px-4 py-2 text-sm")
+                                  "group flex items-center text-sm")
                                 }
                               >
                                 <MdFactCheck
-                                  className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500"
+                                  className="mr-3 h-8 w-8 p-1 rounded bg-green-200 text-green-500 "
                                   aria-hidden="true"
                                 />
                                 Contracts
-                              </Link>
+                              </NavLink>
                             )}
                           </Menu.Item>
+                          </div>
+                          <div className="rounded mx-4 my-2 hover:bg-blue-100">
                           <Menu.Item>
                             {({ active }) => (
-                              <Link
+                              <NavLink
                               to="/people"
                                 className={
                                   (active
                                     ? "bg-gray-100 text-gray-900"
                                     : "text-gray-700",
-                                  "group flex items-center px-4 py-2 text-sm")
+                                  "group flex items-center text-sm")
                                 }
                               >
                                 <MdOutlinePeopleAlt
-                                  className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500"
+                                  className="mr-3 h-8 w-8 p-1 rounded bg-violet-300 text-violet-600 "
                                   aria-hidden="true"
                                 />
                                 People
-                              </Link>
+                              </NavLink>
                             )}
                           </Menu.Item>
+                          </div>
                         </div>
                       </Menu.Items>
                     </Transition>
@@ -188,7 +199,7 @@ export default function Layout({ children }) {
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-1 justify-center px-2 lg:px-0 w-56 basis-5/12">
+                <div className="flex flex-1 justify-center px-2 lg:px-0 max-w-56 basis-5/12">
                   <div className="flex-shrink-0 text-white text-xl font-bold">
                     tyge
                   </div>
@@ -206,7 +217,7 @@ export default function Layout({ children }) {
                     <input
                       id="search"
                       name="search"
-                      className="block w-full rounded-md border border-transparent bg-gray-700 py-2 pl-10 pr-3 leading-5 text-gray-300 placeholder-gray-400 focus:border-white focus:bg-white focus:text-gray-900 focus:outline-none focus:ring-white sm:text-sm"
+                      className="block w-full rounded-md border border-transparent bg-gray-100 py-2 pl-10 pr-3 leading-5 text-gray-700 placeholder-gray-600 focus:border-white focus:bg-white focus:text-gray-900 focus:outline-none focus:ring-white sm:text-sm"
                       placeholder="Search"
                       type="search"
                     />
@@ -270,15 +281,14 @@ export default function Layout({ children }) {
                     {/* Profile dropdown */}
                     <Menu as="div" className="relative ml-4 flex-shrink-0">
                       <div>
-                        <Menu.Button className="flex rounded-full bg-gray-800 text-sm text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                        <Menu.Button className="flex rounded-full bg-gray-800 text-sm text-white focus:outline-none focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                           <span className="sr-only">Open user menu</span>
-                          <img
-                            className="h-8 w-8 rounded-full"
-                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                            alt=""
-                          />
+                          <a href="#" className="rounded-md bg-white px-3 py-2 text-sm font-medium text-gray-900">
+                      Pradeep
+                    </a>
                         </Menu.Button>
                       </div>
+                      
                       <Transition
                         as={Fragment}
                         enter="transition ease-out duration-100"
@@ -370,16 +380,10 @@ export default function Layout({ children }) {
               </div>
               <div className="border-t border-gray-700 pt-4 pb-3">
                 <div className="flex items-center px-5">
-                  <div className="flex-shrink-0">
-                    <img
-                      className="h-10 w-10 rounded-full"
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                      alt=""
-                    />
-                  </div>
+                  
                   <div className="ml-3">
                     <div className="text-base font-medium text-white">
-                      Tom Cook
+                      Pradeep
                     </div>
                     <div className="text-sm font-medium text-gray-400">
                       tom@example.com
