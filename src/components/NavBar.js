@@ -5,14 +5,13 @@ import AppContext from "../AppContext";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { SiRos } from "react-icons/si";
-import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
+import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import { MdFactCheck, MdOutlinePeopleAlt } from "react-icons/md";
 import { AiOutlineExclamationCircle } from "react-icons/ai";
 import { FiBookmark } from "react-icons/fi";
 import { BiBarChartSquare } from "react-icons/bi";
 import { BsFileText } from "react-icons/bs";
 import { TbLayoutDashboard } from "react-icons/tb";
-
 
 export default function Layout({ children }) {
   const authCtx = useContext(AppContext);
@@ -53,133 +52,132 @@ export default function Layout({ children }) {
                       <Menu.Items className="absolute p-2 right--10 z-10 mt-2 w-48 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <div className="py-0">
                           <div className="rounded mx-4 my-2 hover:bg-blue-100 hover:text-blue-600">
-                          <Menu.Item>
-                            {({ active }) => (
-                              <NavLink
-                                to="/dashboard"
-                                className={
-                                  (active
-                                    ? "bg-blue-300 text-blue-600"
-                                    : "text-gray-700",
-                                  "group flex items-center text-sm ")
-                                }
-                              >
-                                <TbLayoutDashboard
-                                  className="mr-3 h-8 w-8 p-1 rounded bg-blue-600 text-white"
-                                  aria-hidden="true"
-                                />
-                                Dashboard
-                              </NavLink>
-                            )}
-                          </Menu.Item>
+                            <Menu.Item>
+                              {({ active }) => (
+                                <NavLink
+                                  to="/dashboard"
+                                  className={
+                                    (active
+                                      ? "bg-blue-300 text-blue-600"
+                                      : "text-gray-700",
+                                    "group flex items-center text-sm ")
+                                  }
+                                >
+                                  <TbLayoutDashboard
+                                    className="mr-3 h-8 w-8 p-1 rounded bg-blue-600 text-white"
+                                    aria-hidden="true"
+                                  />
+                                  Dashboard
+                                </NavLink>
+                              )}
+                            </Menu.Item>
                           </div>
                           <div className="rounded mx-4 my-2 hover:bg-orange-100 hover:text-orange-600">
-                          <Menu.Item>
-                            {({ active }) => (
-                              <NavLink
-                              to="/invoices"
-                                className={
-                                  (active
-                                    ? "bg-gray-100 text-gray-900"
-                                    : "text-gray-700",
-                                  "group flex items-center text-sm")
-                                }
-                              >
-                                <BsFileText
-                                  className="mr-3 h-8 w-8 p-1 rounded bg-orange-200 text-orange-600 "
-                                  aria-hidden="true"
-                                />
-                                Invoices
-                              </NavLink>
-                            )}
-                          </Menu.Item>
+                            <Menu.Item>
+                              {({ active }) => (
+                                <NavLink
+                                  to="/invoices"
+                                  className={
+                                    (active
+                                      ? "bg-gray-100 text-gray-900"
+                                      : "text-gray-700",
+                                    "group flex items-center text-sm")
+                                  }
+                                >
+                                  <BsFileText
+                                    className="mr-3 h-8 w-8 p-1 rounded bg-orange-200 text-orange-600 "
+                                    aria-hidden="true"
+                                  />
+                                  Invoices
+                                </NavLink>
+                              )}
+                            </Menu.Item>
                           </div>
-                        
-                        <div className="rounded mx-4 my-2 hover:bg-red-100 hover:text-red-500">
 
-                          <Menu.Item>
-                            {({ active }) => (
-                              <NavLink
-                              to="/charts"
-                                className={
-                                  (active
-                                    ? "bg-gray-100 text-gray-900"
-                                    : "text-gray-700",
-                                  "group flex items-center text-sm")
-                                }
-                              >
-                                <BiBarChartSquare
-                                  className="mr-3 h-8 w-8 p-1 rounded bg-red-200 text-red-500"
-                                  aria-hidden="true"
-                                />
-                                Masters
-                              </NavLink>
-                            )}
-                          </Menu.Item>
+                          <div className="rounded mx-4 my-2 hover:bg-red-100 hover:text-red-500">
+                            <Menu.Item>
+                              {({ active }) => (
+                                <NavLink
+                                  to="/charts"
+                                  className={
+                                    (active
+                                      ? "bg-gray-100 text-gray-900"
+                                      : "text-gray-700",
+                                    "group flex items-center text-sm")
+                                  }
+                                >
+                                  <BiBarChartSquare
+                                    className="mr-3 h-8 w-8 p-1 rounded bg-red-200 text-red-500"
+                                    aria-hidden="true"
+                                  />
+                                  Masters
+                                </NavLink>
+                              )}
+                            </Menu.Item>
                           </div>
                           <div className="rounded mx-4 my-2 hover:bg-pink-100 hover:text-pink-400">
-                          <Menu.Item>
-                            {({ active }) => (
-                              <NavLink
-                              to="/bookmarks"
-                                className={
-                                  (active
-                                    ? "bg-gray-100 text-gray-900"
-                                    : "text-gray-700",
-                                  "group flex items-center  text-sm")
-                                }
-                              >
-                                <FiBookmark
-                                  className="mr-3 h-8 w-8 p-1 rounded bg-pink-200 text-pink-400 "
-                                  aria-hidden="true"
-                                />
-                                Bookmarks
-                              </NavLink>
-                            )}
-                          </Menu.Item>
+                            <Menu.Item>
+                              {({ active }) => (
+                                <NavLink
+                                  to="/bookmarks"
+                                  className={
+                                    (active
+                                      ? "bg-gray-100 text-gray-900"
+                                      : "text-gray-700",
+                                    "group flex items-center  text-sm")
+                                  }
+                                >
+                                  <FiBookmark
+                                    className="mr-3 h-8 w-8 p-1 rounded bg-pink-200 text-pink-400 "
+                                    aria-hidden="true"
+                                  />
+                                  Bookmarks
+                                </NavLink>
+                              )}
+                            </Menu.Item>
                           </div>
-                        
-                        <div className="rounded mx-4 my-2 hover:bg-green-100 hover:text-green-500">
-                          <Menu.Item>
-                            {({ active }) => (
-                              <NavLink
-                              to="/contracts"
-                                className={
-                                  (active
-                                    ? "bg-gray-100 text-gray-900"
-                                    : "text-gray-700",
-                                  "group flex items-center text-sm")
-                                }
-                              >
-                                <MdFactCheck
-                                  className="mr-3 h-8 w-8 p-1 rounded bg-green-200 text-green-500 "
-                                  aria-hidden="true"
-                                />
-                                Contracts
-                              </NavLink>
-                            )}
-                          </Menu.Item>
+
+                          <div className="rounded mx-4 my-2 hover:bg-green-100 hover:text-green-500">
+                            <Menu.Item>
+                              {({ active }) => (
+                                <NavLink
+                                  to="/contracts"
+                                  className={
+                                    (active
+                                      ? "bg-gray-100 text-gray-900"
+                                      : "text-gray-700",
+                                    "group flex items-center text-sm")
+                                  }
+                                >
+                                  <MdFactCheck
+                                    className="mr-3 h-8 w-8 p-1 rounded bg-green-200 text-green-500 "
+                                    aria-hidden="true"
+                                  />
+                                  Contracts
+                                </NavLink>
+                              )}
+                            </Menu.Item>
                           </div>
                           <div className="rounded mx-4 my-2 hover:bg-blue-100">
-                          <Menu.Item>
-                            {({ active }) => (
-                              <NavLink
-                              to="/people"
-                                className={
-                                  (active
-                                    ? "bg-gray-100 text-gray-900"
-                                    : "text-gray-700",
-                                  "group flex items-center text-sm")
-                                }
-                              >
-                                <MdOutlinePeopleAlt
-                                  className="mr-3 h-8 w-8 p-1 rounded bg-violet-300 text-violet-600 "
-                                  aria-hidden="true"
-                                />
-                                People
-                              </NavLink>
-                            )}
-                          </Menu.Item>
+                            <Menu.Item>
+                              {({ active }) => (
+                                <NavLink
+                                  to="/people"
+                                  className={
+                                    (active
+                                      ? "bg-gray-100 text-gray-900"
+                                      : "text-gray-700",
+                                    "group flex items-center text-sm")
+                                  }
+                                >
+                                  <MdOutlinePeopleAlt
+                                    className="mr-3 h-8 w-8 p-1 rounded bg-violet-300 text-violet-600 "
+                                    aria-hidden="true"
+                                  />
+                                  People
+                                </NavLink>
+                              )}
+                            </Menu.Item>
                           </div>
                         </div>
                       </Menu.Items>
@@ -211,18 +209,20 @@ export default function Layout({ children }) {
                     </label>
 
                     <div className="relative w-56">
-                    <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                      <MagnifyingGlassIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+                      <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                        <MagnifyingGlassIcon
+                          className="h-5 w-5 text-gray-400"
+                          aria-hidden="true"
+                        />
+                      </div>
+                      <input
+                        id="search"
+                        name="search"
+                        className="block w-full rounded-md border border-transparent bg-gray-100 py-2 pl-10 pr-3 leading-5 text-gray-700 placeholder-gray-600 focus:border-white focus:bg-white focus:text-gray-900 focus:outline-none focus:ring-white sm:text-sm"
+                        placeholder="Search"
+                        type="search"
+                      />
                     </div>
-                    <input
-                      id="search"
-                      name="search"
-                      className="block w-full rounded-md border border-transparent bg-gray-100 py-2 pl-10 pr-3 leading-5 text-gray-700 placeholder-gray-600 focus:border-white focus:bg-white focus:text-gray-900 focus:outline-none focus:ring-white sm:text-sm"
-                      placeholder="Search"
-                      type="search"
-                    />
-                  </div>
-
                   </div>
                 </div>
                 <div className="flex lg:hidden">
@@ -283,12 +283,15 @@ export default function Layout({ children }) {
                       <div>
                         <Menu.Button className="flex rounded-full bg-gray-800 text-sm text-white focus:outline-none focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                           <span className="sr-only">Open user menu</span>
-                          <a href="#" className="rounded-md bg-white px-3 py-2 text-sm font-medium text-gray-900">
-                      Pradeep
-                    </a>
+                          <a
+                            href="#"
+                            className="rounded-md bg-white px-3 py-2 text-sm font-medium text-gray-900"
+                          >
+                            Pradeep
+                          </a>
                         </Menu.Button>
                       </div>
-                      
+
                       <Transition
                         as={Fragment}
                         enter="transition ease-out duration-100"
@@ -380,7 +383,6 @@ export default function Layout({ children }) {
               </div>
               <div className="border-t border-gray-700 pt-4 pb-3">
                 <div className="flex items-center px-5">
-                  
                   <div className="ml-3">
                     <div className="text-base font-medium text-white">
                       Pradeep
