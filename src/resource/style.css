@@ -9,3 +9,9 @@ th{
     font-size: 16px;
     color: black;
 }
+.k-master-row td{
+    border: 0ch;
+}
+table tr{
+    border: 0ch;
+}

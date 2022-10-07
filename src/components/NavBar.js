@@ -112,7 +112,7 @@ export default function Layout({ children }) {
                                   className="mr-3 h-8 w-8 p-1 rounded bg-red-200 text-red-500"
                                   aria-hidden="true"
                                 />
-                                Charts
+                                Masters
                               </NavLink>
                             )}
                           </Menu.Item>

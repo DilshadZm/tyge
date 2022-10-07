@@ -8,7 +8,7 @@ import "../resource/style.css"
 function Invoices() {
   return (
 <div>
-  <div className='mx-auto flex lg:my-8 max-w-7xl sm:px-6 lg:px-2 flex-wrap'>
+  <div className='mx-auto flex lg:my-8 max-w-7xl sm:px-6 lg:px-0 flex-wrap'>
     <h2 className='my-1 font-bold lg:text-2xl font-san sm:text-lg'>Supplier Invoices</h2>
     <div className=" items-center w-full max-w-lg mx-5 lg:max-w-xs">
                     <label htmlFor="search" className="sr-only">
@@ -29,7 +29,7 @@ function Invoices() {
                   </div>
 
                   </div>
-                  <div className='flex basis-3/6 my-1 justify-end'>
+                  <div className='flex basis-1/2 my-1 justify-end'>
                   <div classname='justify-items-end'>
                         <button className="flex rounded-full bg-gray-800 text-sm text-white focus:outline-none focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                           
@@ -45,7 +45,7 @@ function Invoices() {
       
       <Grid
     style={{
-        height: "450px",
+        height: "480px",
     }}
     data={products}
     />

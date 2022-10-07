@@ -1,9 +1,10 @@
-import React from 'react'
+import Forms from "./formComponents/forms";
 
-function People() {
+export default function People() {
   return (
-    <div>People</div>
+    <>
+    
+    <Forms/>
+    </>
   )
 }
-
-export default People

@@ -27,7 +27,7 @@ function App() {
               <Route path="bookmarks" element={<Bookmarks />} />
               <Route path="invoices" element={<Invoices />} />
               <Route path="contracts" element={<Contracts />} />
-              <Route path="people" element={<People />} />
+              <Route path="people" element={<People/>} />
             </Routes>
           </Layout>
         </BrowserRouter>
