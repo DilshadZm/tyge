@@ -139,7 +139,7 @@ function Masters() {
       </div>
       <div className="mx-auto flex py-16 flex-wrap max-w-7xl sm:px-6 lg:my-3 rounded-xl lg:px-10 shadow-[-1px_-1px_20px_1px_rgba(0,0,0,0.1),_1px_1px_20px_1px_rgba(45,78,255,0.15)]">
         {companies.map((item) => (
-          <div className="w-1/3 pt-5 m-2 shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+          <div className="w-1/3 pt-5 m-2 shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] max-w-sm bg-white rounded-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
             <div className="flex flex-col items-center pb-10">
               <img
                 className="mb-3 w-24 h-24 rounded-full shadow-lg"

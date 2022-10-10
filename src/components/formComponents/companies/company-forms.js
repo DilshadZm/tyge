@@ -51,7 +51,7 @@ const Forms = () => {
             href="#"
             class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300"
           >
-            Brand
+            Branch
           </a>
         </li>
       </ul>

@@ -1,0 +1,86 @@
+[
+	{
+		"Department Code": 251,
+		"Name": "Aliquam Corp.",
+		"Branch Code": 61,
+		"Active": "not active"
+	},
+	{
+		"Department Code": 307,
+		"Name": "Sit Amet Industries",
+		"Branch Code": 63,
+		"Active": "active"
+	},
+	{
+		"Department Code": 385,
+		"Name": "Risus Nulla Incorporated",
+		"Branch Code": 60,
+		"Active": "active"
+	},
+	{
+		"Department Code": 406,
+		"Name": "Quam Institute",
+		"Branch Code": 70,
+		"Active": "active"
+	},
+	{
+		"Department Code": 400,
+		"Name": "Enim Nisl Limited",
+		"Branch Code": 70,
+		"Active": "not active"
+	},
+	{
+		"Department Code": 282,
+		"Name": "Pede Blandit PC",
+		"Branch Code": 48,
+		"Active": "not active"
+	},
+	{
+		"Department Code": 374,
+		"Name": "Lacus Varius Et Limited",
+		"Branch Code": 88,
+		"Active": "not active"
+	},
+	{
+		"Department Code": 377,
+		"Name": "Tempus PC",
+		"Branch Code": 57,
+		"Active": "active"
+	},
+	{
+		"Department Code": 372,
+		"Name": "Est Ac Inc.",
+		"Branch Code": 70,
+		"Active": "active"
+	},
+	{
+		"Department Code": 291,
+		"Name": "Velit Eu Sem Industries",
+		"Branch Code": 55,
+		"Active": "not active"
+	},
+	{
+		"Department Code": 249,
+		"Name": "Rutrum Justo Praesent Consulting",
+		"Branch Code": 56,
+		"Active": "active"
+	},
+	{
+		"Department Code": 351,
+		"Name": "Phasellus In Incorporated",
+		"Branch Code": 73,
+		"Active": "not active"
+	},
+	{
+		"Department Code": 300,
+		"Name": "Mollis Integer PC",
+		"Branch Code": 51,
+		"Active": "not active"
+	},
+	{
+		"Department Code": 443,
+		"Name": "Ligula Aenean Consulting",
+		"Branch Code": 84,
+		"Active": "active"
+	}
+]
