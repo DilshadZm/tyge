@@ -98,7 +98,7 @@ export default function Layout({ children }) {
                             <Menu.Item>
                               {({ active }) => (
                                 <NavLink
-                                  to="/charts"
+                                  to="/masters"
                                   className={
                                     (active
                                       ? "bg-gray-100 text-gray-900"

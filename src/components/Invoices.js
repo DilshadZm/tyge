@@ -1,6 +1,6 @@
 import React from "react";
 import "@progress/kendo-theme-default/dist/all.css";
-import { Grid, GridColumn } from "@progress/kendo-react-grid";
+import { Grid } from "@progress/kendo-react-grid";
 import products from "./generated.json";
 import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import { RiAddCircleLine } from "react-icons/ri";

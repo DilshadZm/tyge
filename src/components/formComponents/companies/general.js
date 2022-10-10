@@ -1,5 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 const General = () => {
+
+  const [general,setGeneral]=useState({
+    companyCode:"",
+    firstName:"",
+    address:"",
+    email:"",
+    country:"",
+    streetAddress:"",
+    city:"",
+    poBox:"",
+    fax:"",
+    telephone:"",
+    trn:"",
+    region:"",
+    active:"",
+  });
+  const handleChange=(e)=>{
+    const {name,value}=e.target;
+    setGeneral((prev)=>{
+      return {...prev,[name]:value};
+    })
+  }
+  const onSubmit=()=>{
+    console.log(general)
+  }
   return (
     <div className="FirstTab">
       <div className="relative mt-6 flex-1 px-4 sm:px-6">
@@ -17,8 +42,9 @@ const General = () => {
                     </label>
                     <div className="mt-1 sm:col-span-2 sm:mt-0">
                       <input
+                      onChange={handleChange}
                         type="text"
-                        name="company-code"
+                        name="companyCode"
                         id="company-code"
                         autoComplete="given-name"
                         className="block w-full max-w-lg rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:max-w-xs sm:text-sm"
@@ -34,8 +60,9 @@ const General = () => {
                     </label>
                     <div className="mt-1 sm:col-span-2 sm:mt-0">
                       <input
+                      onChange={handleChange}
                         type="text"
-                        name="first-name"
+                        name="firstName"
                         id="first-name"
                         autoComplete="given-name"
                         className="block w-full max-w-lg rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:max-w-xs sm:text-sm"
@@ -52,6 +79,7 @@ const General = () => {
                     </label>
                     <div className="mt-1 sm:col-span-2 sm:mt-0">
                       <textarea
+                      onChange={handleChange}
                         id="address"
                         name="address"
                         rows={3}
@@ -72,6 +100,8 @@ const General = () => {
                     </label>
                     <div className="mt-1 sm:col-span-2 sm:mt-0">
                       <input
+                      onChange={handleChange}
+
                         id="email"
                         name="email"
                         type="email"
@@ -90,6 +120,8 @@ const General = () => {
                     </label>
                     <div className="mt-1 sm:col-span-2 sm:mt-0">
                       <select
+                      onChange={handleChange}
+
                         id="country"
                         name="country"
                         autoComplete="country-name"
@@ -111,8 +143,10 @@ const General = () => {
                     </label>
                     <div className="mt-1 sm:col-span-2 sm:mt-0">
                       <input
+                      onChange={handleChange}
+
                         type="text"
-                        name="street-address"
+                        name="streetAddress"
                         id="street-address"
                         autoComplete="street-address"
                         className="block w-full max-w-lg rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
@@ -129,6 +163,8 @@ const General = () => {
                     </label>
                     <div className="mt-1 sm:col-span-2 sm:mt-0">
                       <input
+                      onChange={handleChange}
+
                         type="text"
                         name="city"
                         id="city"
@@ -147,8 +183,10 @@ const General = () => {
                     </label>
                     <div className="mt-1 sm:col-span-2 sm:mt-0">
                       <input
+                      onChange={handleChange}
+
                         type="text"
-                        name="po-box"
+                        name="poBox"
                         id="po-box"
                         autoComplete="address-level1"
                         className="block w-full max-w-lg rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:max-w-xs sm:text-sm"
@@ -165,6 +203,8 @@ const General = () => {
                     </label>
                     <div className="mt-1 sm:col-span-2 sm:mt-0">
                       <input
+                      onChange={handleChange}
+
                         type="text"
                         name="fax"
                         id="fax"
@@ -182,6 +222,8 @@ const General = () => {
                     </label>
                     <div className="mt-1 sm:col-span-2 sm:mt-0">
                       <input
+                      onChange={handleChange}
+
                         type="text"
                         name="telephone"
                         id="telephone"
@@ -199,6 +241,8 @@ const General = () => {
                     </label>
                     <div className="mt-1 sm:col-span-2 sm:mt-0">
                       <input
+                      onChange={handleChange}
+
                         type="text"
                         name="trn"
                         id="trn"
@@ -216,6 +260,8 @@ const General = () => {
                     </label>
                     <div className="mt-1 sm:col-span-2 sm:mt-0">
                       <input
+                      onChange={handleChange}
+
                         type="text"
                         name="region"
                         id="region"
@@ -236,8 +282,10 @@ const General = () => {
                         <div className="relative flex items-start">
                           <div className="flex h-5 items-center">
                             <input
-                              id="comments"
-                              name="comments"
+                      onChange={handleChange}
+
+                              id="active"
+                              name="active"
                               type="checkbox"
                               className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                             />
@@ -259,6 +307,7 @@ const General = () => {
                   Cancel
                 </button>
                 <button
+                onClick={onSubmit}
                   type="submit"
                   className="ml-3 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                 >

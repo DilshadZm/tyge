@@ -5,50 +5,21 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import "@progress/kendo-theme-default/dist/all.css";
 import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import { RiAddCircleLine } from "react-icons/ri";
-import "../resource/style.css";
-import Forms from "./formComponents/forms";
+// import ".../resource/style.css";
+import products from "../generated.json";
+import { Grid } from "@progress/kendo-react-grid";
 
-function Masters() {
+import Forms from "../formComponents/companies/company-forms";
+import { Link } from "react-router-dom";
+
+function Suppliers() {
   const [open, setOpen] = useState(false);
 
-  const companies = [
-    {
-      Name: "Companies",
-      Description: "May 4, 2022",
-      Number: 213,
-    },
-    {
-      Name: "Suppliers",
-      Description: "May 4, 2022",
-      Number: 713,
-    },
-    {
-      Name: "Countries",
-      Description: "May 4, 2022",
-      Number: 73,
-    },
-    {
-      Name: "Currencies",
-      Description: "May 4, 2022",
-      Number: 13,
-    },
-    {
-      Name: "Users",
-      Description: "May 4, 2022",
-      Number: 1213,
-    },
-    {
-      Name: "Projects",
-      Description: "May 4, 2022",
-      Number: 98,
-    },
-  ];
-  console.log(companies.Name);
   return (
     <div>
       <div className="mx-auto flex lg:my-8 max-w-7xl sm:px-6 lg:px-0 flex-wrap">
         <h2 className="my-1 font-bold lg:text-2xl font-san sm:text-lg">
-          Masters
+          Suppliers
         </h2>
         <div className=" items-center w-full max-w-lg mx-5 lg:max-w-xs">
           <label htmlFor="search" className="sr-only">
@@ -83,7 +54,7 @@ function Masters() {
                 className=" flex rounded-xl bg-violet-600 px-3 py-2 text-sm font-medium text-white"
               >
                 <RiAddCircleLine className="bg-transparent text-white mr-2 w-5 h-5" />
-                Add New Company
+                Add New Supplier
               </a>
             </button>
             <Transition.Root show={open} as={Fragment}>
@@ -138,34 +109,15 @@ function Masters() {
         </div>
       </div>
       <div className="mx-auto flex py-16 flex-wrap max-w-7xl sm:px-6 lg:my-3 rounded-xl lg:px-10 shadow-[-1px_-1px_20px_1px_rgba(0,0,0,0.1),_1px_1px_20px_1px_rgba(45,78,255,0.15)]">
-        {companies.map((item) => (
-          <div className="w-1/3 pt-5 m-2 shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-            <div className="flex flex-col items-center pb-10">
-              <img
-                className="mb-3 w-24 h-24 rounded-full shadow-lg"
-                src="logo.png"
-                alt="Bonnie image"
-              />
-              <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
-                {item.Name}
-              </h5>
-              <span className="text-sm text-gray-500 dark:text-gray-400">
-                {item.Number}
-              </span>
-              <div className="flex mt-4 space-x-3 md:mt-6">
-                <a
-                  href="#"
-                  className="inline-flex items-center py-2 px-4 text-sm font-medium text-center text-gray-900 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700"
-                >
-                  View
-                </a>
-              </div>
-            </div>
-          </div>
-        ))}
+        <Grid
+          style={{
+            height: "480px",
+          }}
+          data={products}
+        />
       </div>
     </div>
   );
 }
 
-export default Masters;
+export default Suppliers;
